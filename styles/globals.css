@@ -3,11 +3,51 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary-50: #fef5f0;
+  --color-primary-100: #fde8de;
+  --color-primary-200: #fbd4c2;
+  --color-primary-300: #f8b69f;
+  --color-primary-400: #f49377;
+  --color-primary-500: #ED9E59;
+  --color-primary-600: #d97c3d;
+  --color-primary-700: #b85c2a;
+  --color-primary-800: #934723;
+  --color-primary-900: #7a3a1d;
+  --color-secondary-50: #faf4f7;
+  --color-secondary-100: #f4e8ef;
+  --color-secondary-200: #e8d1de;
+  --color-secondary-300: #d9b0c9;
+  --color-secondary-400: #c886ae;
+  --color-secondary-500: #A34054;
+  --color-secondary-600: #914037;
+  --color-secondary-700: #7a3429;
+  --color-secondary-800: #652a23;
+  --color-secondary-900: #54231d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+  --color-secondary-50: var(--color-secondary-50);
+  --color-secondary-100: var(--color-secondary-100);
+  --color-secondary-200: var(--color-secondary-200);
+  --color-secondary-300: var(--color-secondary-300);
+  --color-secondary-400: var(--color-secondary-400);
+  --color-secondary-500: var(--color-secondary-500);
+  --color-secondary-600: var(--color-secondary-600);
+  --color-secondary-700: var(--color-secondary-700);
+  --color-secondary-800: var(--color-secondary-800);
+  --color-secondary-900: var(--color-secondary-900);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +63,64 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  .markdown-content h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+  }
+  .markdown-content h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.83em 0;
+  }
+  .markdown-content h3 {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin: 1em 0;
+  }
+  .markdown-content h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1.33em 0;
+  }
+  .markdown-content h5 {
+    font-size: 0.83em;
+    font-weight: bold;
+    margin: 1.67em 0;
+  }
+  .markdown-content h6 {
+    font-size: 0.67em;
+    font-weight: bold;
+    margin: 2.33em 0;
+  }
+  .markdown-content p {
+    margin: 1em 0;
+  }
+  .markdown-content ul {
+    list-style-type: disc;
+    padding-left: 2em;
+    margin: 1em 0;
+  }
+  .markdown-content ol {
+    list-style-type: decimal;
+    padding-left: 2em;
+    margin: 1em 0;
+  }
+  .markdown-content li {
+    margin: 0.25em 0;
+  }
+  .markdown-content strong {
+    font-weight: bold;
+  }
+  .markdown-content em {
+    font-style: italic;
+  }
+  .markdown-content hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 2em 0;
+  }
 }
