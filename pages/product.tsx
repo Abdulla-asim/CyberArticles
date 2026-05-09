@@ -44,6 +44,12 @@ function IdeaGenerator() {
                     Authorization: `Bearer ${jwt}`,
                     'X-API-Key': userApiKey,
                 },
+                onopen: async (response: any) => {
+                    if (!response.ok) {
+                        const data = await response.json();
+                        throw new Error(data.detail || 'Server error');
+                    }
+                },
                 onmessage(ev) {
                     buffer += ev.data;
                     setIdea(buffer);
@@ -63,8 +69,14 @@ function IdeaGenerator() {
                 }
             });
         } catch (err: any) {
-            console.error('Error:', err);
-            setError(err?.message || 'An error occurred');
+            console.error('Fetch error:', err);
+            const errorMsg = err?.message || 'An error occurred';
+            if (errorMsg.includes('API key')) {
+                setError(errorMsg);
+                setApiKeyMissing(true);
+            } else {
+                setError(errorMsg);
+            }
             setLoading(false);
         }
     };
