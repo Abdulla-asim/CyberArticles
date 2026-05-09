@@ -49,12 +49,23 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 CLERK_SECRET_KEY=your_clerk_secret_key
 CLERK_JWKS_URL=your_clerk_jwks_url
 
-# Google Gemini API
+# Optional: Backend Google API Key (fallback if user doesn't provide one)
 GOOGLE_API_KEY=your_google_api_key
 
 # API Configuration
 NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
+
+### User API Key Setup
+
+Users can add their own Google Gemini API key through the **Settings** page:
+
+1. Click "⚙️ Settings" in the app header
+2. Navigate to "Google Gemini API Key" section
+3. [Get your free API key](https://aistudio.google.com/app/apikey)
+4. Paste it in the settings and click "Save API Key"
+
+The key is securely stored in their Clerk user profile and used only for their requests.
 
 ## Installation
 
@@ -128,12 +139,20 @@ saas/
 ## How It Works
 
 1. **User Authentication** - Users sign in via Clerk
-2. **Request** - User clicks "Go to App" or refreshes the page
-3. **API Call** - Frontend calls `/api` endpoint with JWT token
-4. **Article Fetch** - Backend queries Hacker News API for top stories
-5. **AI Summarization** - Google Gemini API generates a summary
-6. **Streaming Response** - Summary streams back to frontend in real-time
-7. **Display** - Markdown content is rendered beautifully in the UI
+2. **API Key Setup** - Users add their own Google Gemini API key in Settings (secure & private)
+3. **Request** - User clicks "↻ Refresh" or visits the app
+4. **API Call** - Frontend calls `/api` endpoint with user's JWT and API key
+5. **Article Fetch** - Backend queries Hacker News API for top stories
+6. **AI Summarization** - Google Gemini API generates a summary using user's key
+7. **Streaming Response** - Summary streams back to frontend in real-time
+8. **Display** - Markdown content is rendered beautifully in the UI
+
+### Key Features
+
+- **No Backend API Cost** - Each user provides their own API key, so you don't pay for API calls
+- **Public Ready** - Safe to make public since no API keys are exposed or shared
+- **User Privacy** - Each user's API key is stored securely in their Clerk profile
+- **Scalable** - No rate limiting or quota concerns since each user has their own quota
 
 ## API Endpoints
 
