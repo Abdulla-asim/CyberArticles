@@ -24,27 +24,25 @@ CyberArticles is a full-stack web application that leverages AI to automatically
 ### Landing Page
 Beautiful marketing page with pricing information and call-to-action. Users can sign in or start a free trial.
 
-### Settings Page
-Users securely add their own Google Gemini API key:
-- Safe, encrypted storage in Clerk user profile
-- Direct link to get free API key
-- Add, view, or remove API key anytime
+![Landing Page](main.png)
 
-### App Dashboard
-Main application interface featuring:
-- **⚙️ Settings button** - Quick access to API key management
-- **↻ Refresh button** - Generate new article summaries on-demand
-- **Real-time streaming** - Watch summaries appear as they're generated
-- **Beautiful formatting** - Markdown rendering with headings, bullet points, and proper styling
-- **Article URL** - Direct link to the full original article
-- **Key Technical Findings** - Highlighted security insights
+### Setup API Key
+When first visiting the app, users see a prompt to add their Google Gemini API key. Quick setup with secure storage in Clerk user profile.
 
-Example output shows articles like "CISA Warns of Critical Vulnerability in Ivanti Connect Secure" with:
-- Detailed overview of the threat
-- Vulnerability type and severity
-- Active exploitation status
-- Target scope and impact
-- Comprehensive key technical findings
+![API Key Setup](setting.png)
+
+### Article Summary
+Once API key is added, users get beautifully formatted article summaries with one click. Refresh button for new summaries on-demand.
+
+![Article Summary](summary.png)
+
+**Features shown:**
+- ⚙️ Settings button for API key management
+- ↻ Refresh button to generate new summaries
+- Real-time streaming content
+- Markdown formatted with headings and bullet points
+- Direct URL to original article
+- Key technical findings highlighted
 
 ## Tech Stack
 
