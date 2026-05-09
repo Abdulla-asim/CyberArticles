@@ -31,7 +31,7 @@ def idea(
     try:
         client = OpenAI(base_url=GEMINI_BASE_URL, api_key=api_key)
         prompt = [{"role": "user", "content": "Find latest cybersecurity articles from https://hacker-news.firebaseio.com/v0/topstories and return 1 working url and then a compelling summary, formatted with Headings, sub-headings and bullet points."}]
-        stream = client.chat.completions.create(model="gemini-2.0-flash-exp", messages=prompt, stream=True)
+        stream = client.chat.completions.create(model="gemini-3.1-flash-lite", messages=prompt, stream=True)
 
         def event_stream():
             for chunk in stream:

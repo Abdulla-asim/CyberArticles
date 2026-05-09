@@ -2,6 +2,8 @@
 
 An AI-powered SaaS application that finds and summarizes the latest cybersecurity articles from Hacker News on each refresh.
 
+Check It Out: https://saas-three-lemon.vercel.app/
+
 ## Overview
 
 CyberArticles is a full-stack web application that leverages AI to automatically discover trending cybersecurity articles and provide compelling summaries. With a single refresh, users get the latest security news summarized with AI-generated insights, formatted with headings, sub-headings, and bullet points.
@@ -14,6 +16,35 @@ CyberArticles is a full-stack web application that leverages AI to automatically
 - ⚡ **Streaming Responses** - Real-time content streaming for fast user experience
 - 🎨 **Modern UI** - Beautiful gradient design with dark mode support
 - 📱 **Responsive Design** - Works seamlessly on all devices
+- 🔄 **Refresh Button** - Generate new summaries on demand without page reload
+- 🔑 **User-Controlled API Keys** - Each user brings their own API key, no backend costs
+
+## Screenshots & Demo
+
+### Landing Page
+Beautiful marketing page with pricing information and call-to-action. Users can sign in or start a free trial.
+
+### Settings Page
+Users securely add their own Google Gemini API key:
+- Safe, encrypted storage in Clerk user profile
+- Direct link to get free API key
+- Add, view, or remove API key anytime
+
+### App Dashboard
+Main application interface featuring:
+- **⚙️ Settings button** - Quick access to API key management
+- **↻ Refresh button** - Generate new article summaries on-demand
+- **Real-time streaming** - Watch summaries appear as they're generated
+- **Beautiful formatting** - Markdown rendering with headings, bullet points, and proper styling
+- **Article URL** - Direct link to the full original article
+- **Key Technical Findings** - Highlighted security insights
+
+Example output shows articles like "CISA Warns of Critical Vulnerability in Ivanti Connect Secure" with:
+- Detailed overview of the threat
+- Vulnerability type and severity
+- Active exploitation status
+- Target scope and impact
+- Comprehensive key technical findings
 
 ## Tech Stack
 
